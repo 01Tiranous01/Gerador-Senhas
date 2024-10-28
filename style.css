@@ -1,0 +1,224 @@
+* {
+    font-family: sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: black;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+    margin: 0;
+  }
+  
+  .logo {
+    max-width: 860px;
+    max-height: 599px;
+    margin-bottom: 12px;
+    align-self: center;
+  }
+  
+  .container-input {
+    max-width: 400px;
+    margin-bottom: 24px;
+  }
+  
+  .container-input span {
+    color: lightseagreen;
+    font-size: 25px;
+  }
+  
+  .slider {
+    appearance: none;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(215, 18, 255, 0.774);
+    height: 10px;
+    outline: none;
+    margin: 8px;
+  }
+  .slider:hover {
+    scale: 1.07;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 162, 255, 1);
+    border-radius: 60px;
+  }
+  .slider::-webkit-slider-thumb:hover {
+    border-radius: 60px; 
+    border: 2px solid fuchsia;
+  }
+  
+  .button-cta {
+    height: 40px;
+    background-color: rgba(126, 0, 138, 0.521);
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: rgb(0, 183, 255);
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button-cta:hover {
+    transform: scale(1.05);
+    border: 2px solid cyan;
+  }
+  
+  .checkboxes {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  .checkboxes label {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    color: lightseagreen; 
+    margin-bottom: 8px; 
+    cursor: pointer; 
+    padding: 4px 8px; 
+    border-radius: 4px; 
+    background-color: rgba(0, 72, 114, 0.1);
+  }
+  .checkboxes label:hover {
+    scale: 1.1;
+    border: 2px solid lightseagreen;
+  }
+  
+  .checkboxes input[type="checkbox"] {
+    margin-right: 8px; 
+  }
+  .checkboxes input[type="checkbox"]:hover{
+   scale: 1.5;
+  }
+  
+  
+  .container-password {
+    max-width: 480px;
+    margin: 14px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .container-password span{
+    color: lightseagreen;
+ 
+  }
+  .tooltip {
+    color: palegreen; /* Cor do tooltip */
+    position: relative;
+    top: 20px;
+    padding: 6px 8px;
+    background: rgba(0, 162, 255, 0.30);
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .tooltip:hover{
+    color: palegreen;
+    font-size: 23px;
+    align-items: center;
+    text-align: center;
+    background: rgb(0, 0, 0);
+    border: 2px solid palegreen;
+    opacity: 0;
+    visibility: visible;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .container-password:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+  }
+  .password {
+    height: 60px;
+    background-color: rgba(0, 162, 255, 0.30);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(234, 0, 255);
+    transition: transform 0.5s;
+  }
+  
+  .password:hover {
+    transform: scale(1.05);
+    border: 2px solid palegreen;
+  }
+  
+  .strength-indicator {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .strength-indicator.very-weak {
+    color: darkred;
+  }
+  
+  .strength-indicator.weak {
+    color: red;
+  }
+  
+  .strength-indicator.medium {
+    color: orange;
+  }
+  
+  .strength-indicator.strong {
+    color: yellow;
+  }
+  
+  .strength-indicator.very-strong {
+    color: green;
+  }
+  
+  .password-history {
+    max-width: 480px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    max-height: 200px;
+  }
+  
+  .password-history h3 {
+    color: lightseagreen;
+  }
+  
+  .password-history ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .password-history li {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgb(0, 183, 255);
+    margin: 5px 0;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
+    border: 2px solid fuchsia;
+  }
+  

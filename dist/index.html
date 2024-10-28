@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="gerador de senhas, password generator">
+  <title>Gerador de Senha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img class="logo" src="./assets/Gerador-de-senhas-25-10-2024-removebg-preview.png" alt="Gerador de senhas Logo">
+  <main class="container-input">
+    <span>Tamanho: <span id="valor"></span> caracteres</span>
+    <input id="slider" class="slider" type="range" min="6" max="40" value="23"/>
+
+    <div class="checkboxes">
+      <label>
+        <input type="checkbox" id="uppercase"> Incluir letras maiúsculas
+      </label>
+      <label>
+        <input type="checkbox" id="numbers"> Incluir números
+      </label>
+      <label>
+        <input type="checkbox" id="symbols"> Incluir símbolos
+      </label>
+    </div>
+
+    <button id="button" class="button-cta" onclick="gerarsenha()"> Gerar senha</button>
+    <span id="password-strength" class="strength-indicator"></span>
+  </main>
+
+  <div id="container-password" class="container-password hide" onclick="copyPassword()">
+    <span>Sua senha gerada foi:</span>
+    <span id="password" class="password"></span>
+    <span id= "tooltip" class="tooltip">Clique na senha gerada para copiar🔗</span>
+  </div>
+
+  <div id="password-history" class="password-history hide">
+    <h3>Histórico de Senhas Geradas:</h3>
+    <ul id="history-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
